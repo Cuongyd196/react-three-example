@@ -17,8 +17,8 @@ pipeline {
                             [sshTransfer(
                                 cleanRemote: false,
                                 excludes: '',
-                                execCommand: "docker build -t demoweb3d ./CuongDev/demoweb3dCI/ --no-cache \
-                                    && docker service rm demo_web  || true \
+                                execCommand: "docker build -t demoweb3d ./CuongDev/demoweb3dCI/ \
+                                    && docker service rm demoweb3d_web  || true \
                                     && docker stack deploy -c ./CuongDev/demoweb3dCI/docker-compose.yml demoweb3d \
                                     && rm -rf ./CuongDev/demoweb3dCIB \
                                     && mv ./CuongDev/demoweb3dCI/ ./CuongDev/demoweb3dCIB",
