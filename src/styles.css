@@ -32,3 +32,21 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
   color: black;
 }
+.arrowIcon{
+  width: 43px;
+  height: 30px;
+}
+.fly-sky{
+  width: 200px;
+  height: 200px;
+}
+@media (max-width: 932px) and (orientation: landscape) {
+  .arrowIcon{
+      width: 23px;
+      height: 10px;
+  }
+    .fly-sky{
+      width: 50px;
+      height: 50px;
+  }
+}

@@ -8,20 +8,20 @@ const store = [
   {
     name: 'livingroom2', position: [0, 0, 0], rotation: [0, 630, 0], color: 'lightpink', url: '/Home/livingroom.jpg', link: 1,
     arrows: [
-      { position: [-4, 10, -270], link: 1, preview: '/Home/bedroom1.jpg', address: 'bedroom1', },
-      { position: [-95, 5, -250], link: 2, preview: '/Home/bedroom2.jpg', address: 'bedroom2' }
+      { position: [-6, -30, -270], link: 1, preview: '/Home/bedroom1.jpg', address: 'bedroom1', },
+      { position: [-90, -30, -250], link: 2, preview: '/Home/bedroom2.jpg', address: 'bedroom2' }
     ]
   },
   {
     name: 'bedroom1', color: 'lightblue', position: [0, 0, 0], rotation: [0, 30, 0], url: '/Home/bedroom1.jpg', link: 0,
     arrows: [
-      { position: [200, -150, 400], link: 0, preview: '/Home/livingroom.jpg', address: 'livingroom', },
+      { position: [160, -180, 400], link: 0, preview: '/Home/livingroom.jpg', address: 'livingroom', },
     ]
   },
   {
     name: 'bedroom2', color: 'lightpink', position: [15, 0, 0], rotation: [0, 630, 0], url: '/Home/bedroom2.jpg', link: 2,
     arrows: [
-      { position: [100, 5, 200], link: 0, preview: '/Home/livingroom.jpg', address: 'livingroom', },
+      { position: [100, -40, 200], link: 0, preview: '/Home/livingroom.jpg', address: 'livingroom', },
     ]
   },
   // ...
@@ -43,7 +43,10 @@ function Dome({ name, position, rotation, texture, onClick, arrows }) {
           <meshBasicMaterial color="white" />
           <Html center>
             <Popconfirm title="Are you sure you want to leave?" onConfirm={() => { handleArrowClick(arrow) }} okText="Yes" cancelText="No">
-              <a href="#">{arrow.address}</a>
+              <div style={{ textAlign: "center" }}>
+                <a style={{ color: "white" }} href="#">{arrow.address}</a>
+                <img className='arrowIcon' src='https://vr360.com.vn/projects/dai-hoc-ngan-hang-tp-hcm/assets/Move/up.png' alt='' />
+              </div>
             </Popconfirm>
           </Html>
         </mesh>
